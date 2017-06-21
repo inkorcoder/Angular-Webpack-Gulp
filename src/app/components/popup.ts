@@ -31,7 +31,7 @@ export class Popup {
 
 	openPopup(){
 		this.isShows = true;
-		setTimeout(()=> { this.isOpened = true }, 1);
+		setTimeout(()=> { this.isOpened = true }, 3);
 	}
 
 	closePopup(event?: Event){

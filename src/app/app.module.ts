@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { Popup } from './components/popup';
 import { Dropdown } from './components/dropdown';
+import { Tabs } from './components/tabs';
 
 @NgModule({
 	imports: [
@@ -13,7 +14,8 @@ import { Dropdown } from './components/dropdown';
 	declarations: [
 		AppComponent,
 		Popup,
-		Dropdown
+		Dropdown,
+		Tabs
 	],
 	bootstrap: [ AppComponent ]
 })

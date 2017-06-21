@@ -36,6 +36,15 @@ import { closest } from './helpers';
 			</div>
 
 			<br>
+			<h2>Tabs</h2>
+			<tabs>
+				<div class="tab" [class.active]="activeTab === 0">1</div>
+				<div class="tab" [class.active]="activeTab === 1">2</div>
+				<div class="tab" [class.active]="activeTab === 2">3</div>
+			</tabs>
+
+
+			<br>
 			<h2>Popups</h2>
 
 			<popup

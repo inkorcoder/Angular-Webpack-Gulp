@@ -1,0 +1,12 @@
+tabs {
+	position: relative;
+	display: block;
+
+	.tab {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}

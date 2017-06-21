@@ -5,7 +5,9 @@ import { Component, Input, HostBinding } from '@angular/core';
 	template: `
 		<button class="anchor" (click)="toggleDropdown($event)">{{anchor}}</button>
 		<div class="dropdown">
-			<ng-content></ng-content>
+			<div class="scrolled">
+				<ng-content></ng-content>
+			</div>
 		</div>
 	`,
 	host: {

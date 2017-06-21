@@ -13,7 +13,7 @@ dropdown {
 		top: 100%; left: 0;
 		width: auto; height: auto;
 		z-index: 2;
-		background: #fff;
+		background: #f0f0f0;
 		transition: $dropdownDuration;
 		pointer-events: none;
 		transform: scale(1,0);
@@ -29,13 +29,17 @@ dropdown {
 dropdown.block {
 	display: block;
 	width: 100%;
+
+	.dropdown {
+		width: 100%;
+	}
 }
 
 dropdown.opened {
 
 	.dropdown {
 		transform: scale(1,1);
-
+		pointer-events: auto;
 		> * {
 			opacity: 1;
 			transition-delay: $dropdownDuration;
