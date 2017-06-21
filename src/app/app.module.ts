@@ -4,6 +4,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { Popup } from './components/popup';
+import { Dropdown } from './components/dropdown';
 
 @NgModule({
 	imports: [
@@ -11,7 +12,8 @@ import { Popup } from './components/popup';
 	],
 	declarations: [
 		AppComponent,
-		Popup
+		Popup,
+		Dropdown
 	],
 	bootstrap: [ AppComponent ]
 })
