@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { Popup } from './components/popup';
 import { Dropdown } from './components/dropdown';
 import { Tabs } from './components/tabs';
+import { Accordeon } from './components/accordeon';
+
+import { TooltipDirective } from './directives/tooltip';
 
 @NgModule({
 	imports: [
@@ -15,8 +18,13 @@ import { Tabs } from './components/tabs';
 		AppComponent,
 		Popup,
 		Dropdown,
-		Tabs
+		Tabs,
+		Accordeon,
+
+		TooltipDirective
 	],
-	bootstrap: [ AppComponent ]
+	bootstrap: [ AppComponent ],
+	schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class AppModule { }
+
+export class AppModule {}

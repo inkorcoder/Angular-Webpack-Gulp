@@ -37,13 +37,50 @@ import { closest } from './helpers';
 
 			<br>
 			<h2>Tabs</h2>
-			<tabs>
-				<div class="tab" [class.active]="activeTab === 0">1</div>
-				<div class="tab" [class.active]="activeTab === 1">2</div>
-				<div class="tab" [class.active]="activeTab === 2">3</div>
-			</tabs>
+			<div class="row">
+				<div class="col-xs-6">
+					<tabs [anchors]="[
+						'flower', 'tree', 'panda'
+					]">
+						<div class="tab">
+							<h4>flower</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum sed eligendi suscipit ullam cumque facilis dolorum, voluptas quo. Quos, unde. Aspernatur laboriosam placeat autem doloremque architecto ex sit a.
+						</div>
+						<div class="tab">
+							<h4>tree</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quas fuga asperiores optio assumenda veritatis iusto minus sequi, architecto quibusdam voluptatem porro accusamus obcaecati vitae eligendi suscipit commodi laudantium, vel.
+						</div>
+						<div class="tab">
+							<h4>panda</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis veritatis cum placeat voluptas, repellendus similique eius hic animi blanditiis eligendi suscipit laborum fugit nisi sapiente non quo molestias enim aliquam.
+						</div>
+					</tabs>
+				</div>
+				<div class="col-xs-6">
+					<tabs [anchors]="[
+						'Tab 1 title', 'Tab 2 content'
+					]" [activeTab]="1">
+						<div class="tab">
+							<h4>Tab 1 title</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rerum sed eligendi suscipit ullam cumque facilis dolorum, voluptas quo. Quos, unde. Aspernatur laboriosam placeat autem doloremque architecto ex sit a.
+						</div>
+						<div class="tab">
+							<h4>Tab 2 active by default</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quas fuga asperiores optio assumenda veritatis iusto minus sequi, architecto quibusdam voluptatem porro accusamus obcaecati vitae eligendi suscipit commodi laudantium, vel.
+						</div>
+					</tabs>
+				</div>
+			</div>
 
 
+			<br>
+			<h2>Tooltip</h2>
+			<button tooltip="Tooltip top">tooltip default</button>
+			<button tooltip="Tooltip down" origin="down">tooltip down</button>
+			<button tooltip="Tooltip left" origin="left">tooltip left</button>
+			<button tooltip="Tooltip right" origin="right">tooltip right</button>
+
+			<br>
 			<br>
 			<h2>Popups</h2>
 
@@ -64,8 +101,8 @@ import { closest } from './helpers';
 				aperiam nisi earum, similique amet libero quidem quos maiores laboriosam. Eius.
 			</popup>
 
-			<button (click)="popup1.openPopup()">Call Popup 1</button>
-			<button (click)="popup2.openPopup()">Call Popup 2</button>
+			<button (click)="popup1.openPopup()">Popup with close button</button>
+			<button (click)="popup2.openPopup()">Popup without close button</button>
 
 		</div>
 	`,
